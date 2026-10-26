@@ -12,6 +12,7 @@ always_load:
   # Skill-local core (figure does not use the prose-oriented nature-shared layer)
   - static/core/contract.md
   - static/core/stance.md
+  - static/core/user-preferences.md   # this user's plotting habits; wins over stance.md
 
 routes:
   graphical_abstract_workflow:

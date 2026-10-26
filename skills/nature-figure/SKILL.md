@@ -36,7 +36,7 @@ For this route:
 4. Use [scripts/generate_openrouter_schematic.py](scripts/generate_openrouter_schematic.py) when the user wants a real API call or a reproducible payload.
 5. Treat output as a draft schematic / graphical abstract, not as a quantitative data panel. Do not invent experimental values, author logos, institutional marks, or unsupported mechanisms. Keep internal usefulness separate from submission eligibility.
 
-If the user wants a hand-built, editable vector schematic (architecture, pipeline, agent or model block diagram, or mechanism flow) rather than an AI-generated image, do **not** ask "Python or R?". Read [references/vector-schematic-workflow.md](references/vector-schematic-workflow.md) and [references/vector-schematic-style-rules.md](references/vector-schematic-style-rules.md), confirm the brief with the user before drawing, and run `scripts/audit_svg_schematic.py` on the SVG before delivery. This route never plots data.
+If the user wants a hand-built, editable vector schematic (architecture, pipeline, agent or model block diagram, or mechanism flow) rather than an AI-generated image, do **not** ask "Python or R?". Read `../figgenie-paper-diagram/references/user-preferences.md` when it is installed (the user's schematic habits), Read [references/vector-schematic-workflow.md](references/vector-schematic-workflow.md) and [references/vector-schematic-style-rules.md](references/vector-schematic-style-rules.md), confirm the brief with the user before drawing, and run `scripts/audit_svg_schematic.py` on the SVG before delivery. This route never plots data.
 
 Only continue to the Python/R backend gate for plotting, charting, data visualization, or manuscript figure assembly tasks that are not explicit OpenRouter AI image-generation requests.
 
@@ -44,7 +44,7 @@ Only continue to the Python/R backend gate for plotting, charting, data visualiz
 
 Read [manifest.yaml](manifest.yaml). It declares the `backend` axis, the allowed values, and the file paths each value maps to.
 
-Also read every file listed under `always_load` (`static/core/contract.md` and `static/core/stance.md`). These hold the figure contract, the backend gate, the missing-runtime rule, the privacy rule, and the default operating stance that apply to every figure job.
+Also read every file listed under `always_load` (`static/core/contract.md`, `static/core/stance.md` and `static/core/user-preferences.md`, the user's own plotting habits, which win over `stance.md`). These hold the figure contract, the backend gate, the missing-runtime rule, the privacy rule, and the default operating stance that apply to every figure job.
 
 ### 2. Resolve the plotting backend
 
